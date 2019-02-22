@@ -1,5 +1,6 @@
 
 <h1><%= @cocktail.name %></h1> <%= link_to "Delete #{@cocktail.name}", cocktail_path(@cocktail), method: :delete %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <h3>Doses</h3> <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
 
   <% @cocktail.doses.each do | dose |  %>
